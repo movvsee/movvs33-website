@@ -71,12 +71,21 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
+      gap: 8px;
     }
 
     .nav-logo img {
       width: 42px;
       height: 42px;
       object-fit: contain;
+    }
+
+    .nav-logo span {
+      color: #f2f0eb;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      line-height: 1;
     }
 
     .nav-links {
@@ -102,12 +111,13 @@
     ========================= */
 
     .hero {
-      min-height: 100vh;
+      min-height: calc(100vh - 72px);
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
-      padding-top: 72px;
+      padding-top: 0;
+      transform: translateY(-20px);
     }
 
     .hero::before {
@@ -554,6 +564,10 @@
         height: 42px;
       }
 
+      .nav-logo span {
+        font-size: 18px;
+      }
+
       .nav-links {
         display: none;
       }
@@ -563,7 +577,9 @@
       }
 
       .hero {
-        min-height: 90vh;
+        min-height: calc(90vh - 65px);
+        padding-top: 0;
+        transform: translateY(-15px);
       }
 
       .hero h1 {
@@ -647,6 +663,7 @@
 
       <a href="#" class="nav-logo">
         <img src="assets/logo.png" alt="MOVVS33">
+        <span>OVVS33</span>
       </a>
 
       <div class="nav-links">
@@ -832,38 +849,53 @@
       <div class="content-grid">
 
         <div class="content-card">
-          <div class="content-card-number">01</div>
+
+          <div class="content-card-number">
+            01
+          </div>
 
           <div>
             <h3>Gaming</h3>
+
             <p>
               High-energy gameplay, highlights and competitive moments.
             </p>
           </div>
+
         </div>
 
 
         <div class="content-card">
-          <div class="content-card-number">02</div>
+
+          <div class="content-card-number">
+            02
+          </div>
 
           <div>
             <h3>Tips & Tricks</h3>
+
             <p>
               Settings, loadouts, strategies and practical gaming advice.
             </p>
           </div>
+
         </div>
 
 
         <div class="content-card">
-          <div class="content-card-number">03</div>
+
+          <div class="content-card-number">
+            03
+          </div>
 
           <div>
             <h3>Brand Content</h3>
+
             <p>
               Native brand integrations designed for gaming audiences.
             </p>
           </div>
+
         </div>
 
       </div>
@@ -963,16 +995,24 @@
         >
 
           <div>
-            <div class="link-label">OFFICIAL WIKI</div>
 
-            <h3>MOVVS33 Wiki</h3>
+            <div class="link-label">
+              OFFICIAL WIKI
+            </div>
+
+            <h3>
+              MOVVS33 Wiki
+            </h3>
 
             <p>
               My official creator profile and information.
             </p>
+
           </div>
 
-          <div class="link-arrow">↗</div>
+          <div class="link-arrow">
+            ↗
+          </div>
 
         </a>
 
@@ -986,16 +1026,24 @@
         >
 
           <div>
-            <div class="link-label">GAMING MARKETPLACE</div>
 
-            <h3>Top Up Blood Strike</h3>
+            <div class="link-label">
+              GAMING MARKETPLACE
+            </div>
+
+            <h3>
+              Top Up Blood Strike
+            </h3>
 
             <p>
               Get Blood Strike Gold through my exclusive link.
             </p>
+
           </div>
 
-          <div class="link-arrow">↗</div>
+          <div class="link-arrow">
+            ↗
+          </div>
 
         </a>
 
@@ -1009,16 +1057,24 @@
         >
 
           <div>
-            <div class="link-label">FEATURED ARTICLE</div>
 
-            <h3>How Mobile Gaming Became a Creator Career</h3>
+            <div class="link-label">
+              FEATURED ARTICLE
+            </div>
+
+            <h3>
+              How Mobile Gaming Became a Creator Career
+            </h3>
 
             <p>
               Read my featured creator story.
             </p>
+
           </div>
 
-          <div class="link-arrow">↗</div>
+          <div class="link-arrow">
+            ↗
+          </div>
 
         </a>
 
@@ -1032,16 +1088,24 @@
         >
 
           <div>
-            <div class="link-label">GAMING SERVICES</div>
 
-            <h3>Skycoach</h3>
+            <div class="link-label">
+              GAMING SERVICES
+            </div>
+
+            <h3>
+              Skycoach
+            </h3>
 
             <p>
               Gaming boosting and coaching services.
             </p>
+
           </div>
 
-          <div class="link-arrow">↗</div>
+          <div class="link-arrow">
+            ↗
+          </div>
 
         </a>
 
@@ -1055,16 +1119,24 @@
         >
 
           <div>
-            <div class="link-label">PARTNER</div>
 
-            <h3>SkinClub</h3>
+            <div class="link-label">
+              PARTNER
+            </div>
+
+            <h3>
+              SkinClub
+            </h3>
 
             <p>
               CS2 case opening and gaming skins.
             </p>
+
           </div>
 
-          <div class="link-arrow">↗</div>
+          <div class="link-arrow">
+            ↗
+          </div>
 
         </a>
 
@@ -1078,16 +1150,24 @@
         >
 
           <div>
-            <div class="link-label">SOCIAL</div>
 
-            <h3>TikTok</h3>
+            <div class="link-label">
+              SOCIAL
+            </div>
+
+            <h3>
+              TikTok
+            </h3>
 
             <p>
               Follow MOVVS33 on TikTok.
             </p>
+
           </div>
 
-          <div class="link-arrow">↗</div>
+          <div class="link-arrow">
+            ↗
+          </div>
 
         </a>
 
@@ -1101,16 +1181,24 @@
         >
 
           <div>
-            <div class="link-label">SOCIAL</div>
 
-            <h3>Instagram</h3>
+            <div class="link-label">
+              SOCIAL
+            </div>
+
+            <h3>
+              Instagram
+            </h3>
 
             <p>
               Follow MOVVS33 on Instagram.
             </p>
+
           </div>
 
-          <div class="link-arrow">↗</div>
+          <div class="link-arrow">
+            ↗
+          </div>
 
         </a>
 
@@ -1124,16 +1212,24 @@
         >
 
           <div>
-            <div class="link-label">SOCIAL</div>
 
-            <h3>Facebook</h3>
+            <div class="link-label">
+              SOCIAL
+            </div>
+
+            <h3>
+              Facebook
+            </h3>
 
             <p>
               Follow MOVVS33 on Facebook.
             </p>
+
           </div>
 
-          <div class="link-arrow">↗</div>
+          <div class="link-arrow">
+            ↗
+          </div>
 
         </a>
 
@@ -1147,16 +1243,24 @@
         >
 
           <div>
-            <div class="link-label">SOCIAL</div>
 
-            <h3>YouTube</h3>
+            <div class="link-label">
+              SOCIAL
+            </div>
+
+            <h3>
+              YouTube
+            </h3>
 
             <p>
               Watch MOVVS33 on YouTube.
             </p>
+
           </div>
 
-          <div class="link-arrow">↗</div>
+          <div class="link-arrow">
+            ↗
+          </div>
 
         </a>
 
@@ -1170,16 +1274,24 @@
         >
 
           <div>
-            <div class="link-label">COMMUNITY</div>
 
-            <h3>WhatsApp Community</h3>
+            <div class="link-label">
+              COMMUNITY
+            </div>
+
+            <h3>
+              WhatsApp Community
+            </h3>
 
             <p>
               Join the MOVVS33 BloodStrike community.
             </p>
+
           </div>
 
-          <div class="link-arrow">↗</div>
+          <div class="link-arrow">
+            ↗
+          </div>
 
         </a>
 
@@ -1193,16 +1305,24 @@
         >
 
           <div>
-            <div class="link-label">COMMUNITY</div>
 
-            <h3>Discord</h3>
+            <div class="link-label">
+              COMMUNITY
+            </div>
+
+            <h3>
+              Discord
+            </h3>
 
             <p>
               Join the MOVVS33 Discord community.
             </p>
+
           </div>
 
-          <div class="link-arrow">↗</div>
+          <div class="link-arrow">
+            ↗
+          </div>
 
         </a>
 
@@ -1240,24 +1360,41 @@
       <div class="partnership-grid">
 
         <div class="partner-card">
-          <h3>Sponsored Content</h3>
+
+          <h3>
+            Sponsored Content
+          </h3>
+
           <p>
             Native gaming videos, product integrations and promotional campaigns.
           </p>
+
         </div>
 
+
         <div class="partner-card">
-          <h3>Brand Partnerships</h3>
+
+          <h3>
+            Brand Partnerships
+          </h3>
+
           <p>
             Long-term collaborations with gaming brands and platforms.
           </p>
+
         </div>
 
+
         <div class="partner-card">
-          <h3>Campaigns</h3>
+
+          <h3>
+            Campaigns
+          </h3>
+
           <p>
             Multi-platform campaigns designed to reach and engage gamers.
           </p>
+
         </div>
 
       </div>
@@ -1292,11 +1429,15 @@
       <div class="contact-box">
 
         <div>
-          <h3>Business inquiries</h3>
+
+          <h3>
+            Business inquiries
+          </h3>
 
           <p>
             Available for gaming partnerships, campaigns and creator collaborations.
           </p>
+
         </div>
 
         <a
