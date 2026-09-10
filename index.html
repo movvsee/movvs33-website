@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="assets/logo.png">
 
-  <title>MOVVS33 | Gamer, Influencer & Content Creator</title>
-  <meta name="description" content="MOVVS33 — Gamer, influencer and content creator. Gaming content, partnerships, collaborations and more.">
+  <title>MOVVS33 | Gamer · Influencer · Content Creator</title>
+
+  <meta name="description" content="MOVVS33 — Gamer, Influencer and Content Creator. Gaming content, partnerships, community and creator work.">
+
+  <link rel="icon" type="image/png" href="assets/logo.png">
 
   <style>
     * {
@@ -31,12 +33,18 @@
       text-decoration: none;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     .container {
-      width: min(1120px, 92%);
+      width: min(1180px, 92%);
       margin: auto;
     }
 
     /* NAVIGATION */
+
     nav {
       position: fixed;
       top: 0;
@@ -45,277 +53,270 @@
       z-index: 1000;
       background: rgba(8, 8, 8, 0.92);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid #3d0b11;
+      border-bottom: 1px solid #1d1d1d;
     }
 
     .nav-inner {
-      height: 76px;
+      width: min(1180px, 92%);
+      margin: auto;
+      height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    .brand {
-      font-size: 22px;
-      font-weight: 900;
-      letter-spacing: 3px;
-      color: #f2f0eb;
-    }
-
-    .brand:hover {
-      color: #c1121f;
+    .nav-logo img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
     }
 
     .nav-links {
       display: flex;
-      gap: 28px;
-      font-size: 14px;
-      color: #bdbbb5;
+      align-items: center;
+      gap: 30px;
     }
 
     .nav-links a {
-      transition: 0.2s;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #aaa;
+      transition: 0.25s;
     }
 
     .nav-links a:hover {
-      color: #c1121f;
+      color: #e02b38;
     }
 
     /* HERO */
+
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
-      padding: 120px 0 80px;
-      background:
-        radial-gradient(circle at 75% 30%, #3d0b11 0%, transparent 35%),
-        linear-gradient(135deg, #080808 0%, #0e0e0e 100%);
+      position: relative;
+      overflow: hidden;
+      padding-top: 78px;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 60px;
-      align-items: center;
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: #3d0b11;
+      filter: blur(140px);
+      opacity: 0.35;
+      right: -250px;
+      top: 100px;
+      border-radius: 50%;
     }
 
-    .eyebrow {
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+    }
+
+    .hero-label {
       color: #e02b38;
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 12px;
-      margin-bottom: 18px;
+      font-size: 11px;
       font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
     }
 
-    h1 {
-      font-size: clamp(58px, 9vw, 110px);
-      line-height: 0.9;
-      letter-spacing: -5px;
-      margin-bottom: 28px;
+    .hero h1 {
+      font-size: clamp(70px, 13vw, 170px);
+      line-height: 0.85;
+      letter-spacing: -7px;
+      font-weight: 900;
+      margin-bottom: 35px;
     }
 
     .hero h1 span {
       color: #c1121f;
     }
 
-    .hero-text {
-      max-width: 600px;
-      color: #aaa79f;
+    .hero-description {
+      max-width: 620px;
+      color: #aaa;
       font-size: 18px;
-      margin-bottom: 32px;
+      margin-bottom: 35px;
     }
 
-    .buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
+    .hero-role {
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #f2f0eb;
+      margin-bottom: 35px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 14px 24px;
-      border: 1px solid #5a141c;
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: bold;
+    .hero-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      background: #c1121f;
+      padding: 15px 25px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
       transition: 0.25s;
     }
 
-    .btn-primary {
-      background: #c1121f;
-      color: #f2f0eb;
-      border-color: #c1121f;
-    }
-
-    .btn-primary:hover {
+    .hero-button:hover {
       background: #e01b2a;
-      border-color: #e01b2a;
-      transform: translateY(-2px);
+      transform: translateY(-3px);
     }
 
-    .btn:not(.btn-primary) {
-      background: transparent;
-      color: #f2f0eb;
-    }
+    /* GENERAL SECTIONS */
 
-    .btn:not(.btn-primary):hover {
-      background: #3d0b11;
-      border-color: #c1121f;
-      transform: translateY(-2px);
-    }
-
-    .logo-box {
-      min-height: 360px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .logo-box img {
-      width: min(360px, 80%);
-      max-height: 360px;
-      object-fit: contain;
-      filter: drop-shadow(0 0 35px rgba(193, 18, 31, 0.22));
-    }
-
-    .logo-placeholder {
-      width: 320px;
-      height: 320px;
-      border: 1px solid #3d0b11;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #555;
-      font-size: 13px;
-      text-align: center;
-      padding: 30px;
-    }
-
-    /* SECTIONS */
     section {
-      padding: 100px 0;
-      border-top: 1px solid #1d0c10;
+      padding: 120px 0;
+      border-top: 1px solid #161616;
     }
 
     .section-label {
       color: #e02b38;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      margin-bottom: 12px;
+      font-size: 10px;
       font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
     }
 
     .section-title {
-      font-size: clamp(36px, 5vw, 58px);
+      font-size: clamp(42px, 6vw, 72px);
       line-height: 1;
+      letter-spacing: -3px;
       margin-bottom: 25px;
-      letter-spacing: -2px;
     }
 
     .section-text {
-      color: #a7a49d;
-      max-width: 720px;
-      font-size: 17px;
+      color: #888;
+      max-width: 650px;
+      font-size: 16px;
     }
 
-    /* STATS */
-    .stats {
+    /* ABOUT */
+
+    .about-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      margin-top: 50px;
-      background: #3d0b11;
-      border: 1px solid #3d0b11;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
     }
 
     .stat {
-      background: #0c0c0c;
-      padding: 32px 20px;
-      text-align: center;
-      transition: 0.25s;
-    }
-
-    .stat:hover {
-      background: #16090c;
+      padding: 30px;
+      background: #0d0d0d;
+      border: 1px solid #1d1d1d;
     }
 
     .stat-number {
+      display: block;
+      color: #e02b38;
       font-size: 34px;
       font-weight: 800;
       margin-bottom: 5px;
-      color: #f2f0eb;
     }
 
     .stat-label {
       color: #777;
-      font-size: 12px;
-      text-transform: uppercase;
+      font-size: 11px;
       letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     /* CONTENT */
+
     .content-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
-      margin-top: 45px;
+      margin-top: 50px;
     }
 
     .content-card {
-      background: #101010;
-      border: 1px solid #241217;
+      min-height: 260px;
       padding: 30px;
-      min-height: 210px;
+      background: #0d0d0d;
+      border: 1px solid #1d1d1d;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
       transition: 0.25s;
     }
 
     .content-card:hover {
       transform: translateY(-5px);
       border-color: #c1121f;
-      background: #16090c;
+      background: #11090a;
+    }
+
+    .content-number {
+      color: #e02b38;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-bottom: auto;
     }
 
     .content-card h3 {
-      font-size: 23px;
-      margin-bottom: 12px;
+      font-size: 25px;
+      margin-bottom: 8px;
     }
 
     .content-card p {
-      color: #888;
-      font-size: 14px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 45px;
+    }
+
+    .social-link {
+      border: 1px solid #292929;
+      padding: 13px 20px;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #aaa;
+      transition: 0.25s;
+    }
+
+    .social-link:hover {
+      border-color: #c1121f;
+      color: #f2f0eb;
+      background: #13090b;
     }
 
     /* FEATURED TIKTOK */
-    .tiktok-section {
-      background:
-        radial-gradient(circle at 20% 20%, rgba(193, 18, 31, 0.08), transparent 35%),
-        #080808;
-    }
 
     .tiktok-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-      margin-top: 45px;
+      gap: 18px;
+      margin-top: 50px;
     }
 
     .tiktok-card {
-      position: relative;
-      background: #0c0c0c;
-      border: 1px solid #321017;
-      border-radius: 8px;
+      background: #0d0d0d;
+      border: 1px solid #1d1d1d;
       overflow: hidden;
-      transition: 0.3s ease;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
-    }
-
-    .tiktok-card:hover {
-      transform: translateY(-6px);
-      border-color: #c1121f;
-      box-shadow: 0 20px 45px rgba(193, 18, 31, 0.12);
     }
 
     .tiktok-video {
@@ -327,187 +328,249 @@
     }
 
     .tiktok-video iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
       border: 0;
+      display: block;
     }
 
-    .tiktok-info {
-      padding: 18px;
+    /* LINKS */
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 45px;
+    }
+
+    .link-card {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 15px;
+      gap: 20px;
+      padding: 26px 28px;
       background: #0d0d0d;
+      border: 1px solid #241217;
+      border-radius: 6px;
+      transition: 0.25s ease;
     }
 
-    .tiktok-info span {
+    .link-card:hover {
+      transform: translateY(-4px);
+      background: #16090c;
+      border-color: #c1121f;
+      box-shadow: 0 15px 35px rgba(193, 18, 31, 0.10);
+    }
+
+    .link-card h3 {
+      font-size: 21px;
+      margin: 4px 0 5px;
+    }
+
+    .link-card p {
+      color: #888;
       font-size: 13px;
-      color: #999;
+      margin: 0;
     }
 
-    .tiktok-link {
+    .link-label {
       color: #e02b38;
-      font-size: 13px;
+      font-size: 10px;
       font-weight: 700;
-      white-space: nowrap;
+      letter-spacing: 2px;
     }
 
-    .tiktok-link:hover {
+    .link-arrow {
+      color: #e02b38;
+      font-size: 20px;
+      transition: 0.2s;
+    }
+
+    .link-card:hover .link-arrow {
       color: #f2f0eb;
+      transform: translate(3px, -3px);
+    }
+
+    .featured-link {
+      border-color: #5a141c;
+      background: linear-gradient(
+        135deg,
+        #16090c 0%,
+        #0d0d0d 100%
+      );
     }
 
     /* PARTNERSHIPS */
+
     .partnership-box {
-      margin-top: 45px;
-      background:
-        linear-gradient(135deg, #16090c 0%, #101010 100%);
-      border: 1px solid #3d0b11;
-      padding: 45px;
+      margin-top: 50px;
+      padding: 50px;
+      background: linear-gradient(
+        135deg,
+        #16090c 0%,
+        #0d0d0d 70%
+      );
+      border: 1px solid #321218;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 40px;
     }
 
     .partnership-box h3 {
-      font-size: 28px;
+      font-size: 32px;
       margin-bottom: 10px;
     }
 
     .partnership-box p {
       color: #888;
-      max-width: 650px;
+      max-width: 600px;
     }
 
-    /* SOCIALS */
-    .socials {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 35px;
-    }
-
-    .social {
-      padding: 12px 20px;
-      border: 1px solid #292929;
-      background: #0e0e0e;
-      font-size: 13px;
+    .partnership-button {
+      flex-shrink: 0;
+      padding: 15px 25px;
+      background: #c1121f;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
       transition: 0.25s;
     }
 
-    .social:hover {
-      background: #c1121f;
-      border-color: #c1121f;
-      color: #f2f0eb;
-      transform: translateY(-2px);
+    .partnership-button:hover {
+      background: #e01b2a;
     }
 
     /* CONTACT */
-    .contact-box {
-      margin-top: 40px;
-      padding: 45px;
-      border: 1px solid #3d0b11;
-      background:
-        radial-gradient(circle at 90% 20%, #3d0b11 0%, transparent 30%),
-        linear-gradient(135deg, #111 0%, #0b0b0b 100%);
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: end;
     }
 
-    .email {
+    .email-box {
+      margin-top: 35px;
       display: inline-block;
-      font-size: clamp(24px, 4vw, 42px);
-      margin: 20px 0 30px;
-      font-weight: 700;
-      transition: 0.2s;
+      color: #f2f0eb;
+      font-size: clamp(22px, 4vw, 42px);
+      border-bottom: 2px solid #c1121f;
+      padding-bottom: 8px;
+      transition: 0.25s;
     }
 
-    .email:hover {
+    .email-box:hover {
       color: #e02b38;
     }
 
+    .contact-note {
+      color: #777;
+      font-size: 13px;
+    }
+
     /* FOOTER */
+
     footer {
-      border-top: 1px solid #1d0c10;
-      padding: 35px 0;
-      color: #666;
-      font-size: 12px;
-      background: #060606;
+      padding: 40px 0;
+      border-top: 1px solid #161616;
     }
 
     .footer-inner {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       gap: 20px;
     }
 
+    .footer-brand {
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .footer-brand span {
+      color: #c1121f;
+    }
+
+    .footer-copy {
+      color: #555;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
     /* MOBILE */
-    @media (max-width: 800px) {
+
+    @media (max-width: 850px) {
+
+      .nav-inner {
+        height: 70px;
+      }
+
       .nav-links {
         display: none;
       }
 
-      .hero-grid {
+      .hero {
+        min-height: 90vh;
+      }
+
+      .hero h1 {
+        letter-spacing: -4px;
+      }
+
+      .about-grid,
+      .contact-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 45px;
       }
 
-      .logo-box {
-        min-height: 250px;
-        order: -1;
-      }
-
-      .logo-box img {
-        width: min(280px, 75%);
-      }
-
-      .logo-placeholder {
-        width: 220px;
-        height: 220px;
-      }
-
-      h1 {
-        font-size: 65px;
-      }
-
-      .stats {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .content-grid {
+      .content-grid,
+      .tiktok-grid {
         grid-template-columns: 1fr;
       }
 
       .tiktok-grid {
-        grid-template-columns: 1fr;
         max-width: 430px;
-        margin-left: auto;
-        margin-right: auto;
       }
 
-      .tiktok-card {
-        width: 100%;
+      .links-grid {
+        grid-template-columns: 1fr;
       }
 
       .partnership-box {
         flex-direction: column;
         align-items: flex-start;
-        padding: 30px;
+        padding: 35px;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      section {
+        padding: 90px 0;
       }
 
-      .contact-box {
-        padding: 30px;
+      .hero h1 {
+        font-size: 70px;
       }
 
-      .email {
-        font-size: 25px;
-        word-break: break-word;
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .link-card {
+        padding: 22px;
+      }
+
+      .link-card h3 {
+        font-size: 18px;
       }
 
       .footer-inner {
         flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
@@ -516,295 +579,681 @@
 <body>
 
   <!-- NAVIGATION -->
+
   <nav>
-    <div class="container nav-inner">
-      <a href="#" class="brand">MOVVS33</a>
+    <div class="nav-inner">
+
+      <a href="#" class="nav-logo">
+        <img src="assets/logo.png" alt="MOVVS33">
+      </a>
 
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#content">Content</a>
         <a href="#featured">Featured</a>
+        <a href="#links">Links</a>
         <a href="#partnerships">Partnerships</a>
         <a href="#contact">Contact</a>
       </div>
+
     </div>
   </nav>
 
+
   <!-- HERO -->
+
   <header class="hero">
-    <div class="container hero-grid">
 
-      <div>
-        <div class="eyebrow">Gamer · Influencer · Content Creator</div>
+    <div class="container">
 
-        <h1>MOVVS<span>33</span></h1>
+      <div class="hero-content">
 
-        <p class="hero-text">
-          Gaming creator building a community through competitive gameplay,
-          gaming tips, entertainment and authentic brand partnerships.
+        <div class="hero-label">
+          Independent Gaming Creator
+        </div>
+
+        <h1>
+          MOVVS<span>33</span>
+        </h1>
+
+        <div class="hero-role">
+          Gamer · Influencer · Content Creator
+        </div>
+
+        <p class="hero-description">
+          Building a gaming community through competitive gameplay,
+          entertaining content and meaningful brand partnerships.
         </p>
 
-        <div class="buttons">
-          <a href="#content" class="btn btn-primary">Explore Content</a>
-          <a href="#contact" class="btn">Work With Me</a>
-        </div>
-      </div>
+        <a href="#contact" class="hero-button">
+          Work With Me →
+        </a>
 
-      <div class="logo-box">
-        <img src="assets/logo.png" alt="MOVVS33 Logo"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-
-        <div class="logo-placeholder" style="display:none;">
-          MOVVS33 LOGO<br>
-          <small>We'll add your logo here</small>
-        </div>
       </div>
 
     </div>
+
   </header>
 
+
   <!-- ABOUT -->
+
   <section id="about">
+
     <div class="container">
 
-      <div class="section-label">01 / About</div>
+      <div class="about-grid">
 
-      <h2 class="section-title">Built around gaming.<br>Driven by community.</h2>
+        <div>
 
-      <p class="section-text">
-        MOVVS33 is a gaming creator brand focused on creating engaging,
-        useful and entertaining gaming content. From gameplay and settings
-        to tips, tricks and creator collaborations, the goal is simple:
-        create content people want to watch and share.
-      </p>
+          <div class="section-label">
+            01 / About
+          </div>
 
-      <div class="stats">
-        <div class="stat">
-          <div class="stat-number">32K+</div>
-          <div class="stat-label">TikTok Followers</div>
+          <h2 class="section-title">
+            More than<br>just gaming.
+          </h2>
+
+          <p class="section-text">
+            MOVVS33 is a gaming creator and influencer focused on
+            creating engaging gaming content, growing a strong community
+            and partnering with brands that fit naturally into the
+            gaming ecosystem.
+          </p>
+
         </div>
 
-        <div class="stat">
-          <div class="stat-number">9.8M+</div>
-          <div class="stat-label">60-Day Views</div>
+        <div class="stats-grid">
+
+          <div class="stat">
+            <span class="stat-number">32K+</span>
+            <span class="stat-label">TikTok Followers</span>
+          </div>
+
+          <div class="stat">
+            <span class="stat-number">9.8M+</span>
+            <span class="stat-label">60-Day Views</span>
+          </div>
+
+          <div class="stat">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Community Members</span>
+          </div>
+
+          <div class="stat">
+            <span class="stat-number">100K+</span>
+            <span class="stat-label">Viral Content</span>
+          </div>
+
         </div>
 
-        <div class="stat">
-          <div class="stat-number">500+</div>
-          <div class="stat-label">Community Members</div>
-        </div>
-
-        <div class="stat">
-          <div class="stat-number">100K+</div>
-          <div class="stat-label">Viral Content</div>
-        </div>
       </div>
 
     </div>
+
   </section>
 
+
   <!-- CONTENT -->
+
   <section id="content">
+
     <div class="container">
 
-      <div class="section-label">02 / Content</div>
+      <div class="section-label">
+        02 / Content
+      </div>
 
-      <h2 class="section-title">What I create.</h2>
+      <h2 class="section-title">
+        Built for<br>attention.
+      </h2>
 
       <p class="section-text">
-        Gaming content designed to entertain, educate and keep the community
-        coming back.
+        Gaming content designed around entertainment, education,
+        gameplay and community.
       </p>
 
       <div class="content-grid">
 
         <div class="content-card">
-          <h3>Gaming Tips</h3>
-          <p>
-            Practical settings, sensitivity guides, loadouts and gameplay
-            tips that help players improve.
-          </p>
+          <div class="content-number">01</div>
+
+          <div>
+            <h3>Gaming</h3>
+            <p>
+              Gameplay, tips, settings, loadouts and competitive content.
+            </p>
+          </div>
         </div>
 
         <div class="content-card">
-          <h3>Gameplay</h3>
-          <p>
-            Competitive gaming clips, highlights, challenges and entertaining
-            moments from the games I play.
-          </p>
+          <div class="content-number">02</div>
+
+          <div>
+            <h3>Short Form</h3>
+            <p>
+              High-retention TikTok, Instagram and Facebook content.
+            </p>
+          </div>
         </div>
 
         <div class="content-card">
-          <h3>Gaming Community</h3>
-          <p>
-            Building an active community around gaming, creators and shared
-            experiences.
-          </p>
+          <div class="content-number">03</div>
+
+          <div>
+            <h3>Community</h3>
+            <p>
+              Building an active gaming audience across multiple platforms.
+            </p>
+          </div>
         </div>
 
       </div>
 
-      <div class="socials">
-        <a class="social" href="https://www.tiktok.com/@movvs33" target="_blank">TikTok</a>
-        <a class="social" href="https://www.instagram.com/movvs33" target="_blank">Instagram</a>
-        <a class="social" href="https://www.youtube.com/@movvs33" target="_blank">YouTube</a>
-        <a class="social" href="https://www.facebook.com/movvs33" target="_blank">Facebook</a>
+      <div class="social-links">
+
+        <a
+          href="https://www.tiktok.com/@movvs33"
+          target="_blank"
+          class="social-link"
+        >
+          TikTok
+        </a>
+
+        <a
+          href="https://www.instagram.com/movvs33"
+          target="_blank"
+          class="social-link"
+        >
+          Instagram
+        </a>
+
+        <a
+          href="https://www.youtube.com/@movvs33"
+          target="_blank"
+          class="social-link"
+        >
+          YouTube
+        </a>
+
+        <a
+          href="https://www.facebook.com/movvs33"
+          target="_blank"
+          class="social-link"
+        >
+          Facebook
+        </a>
+
       </div>
 
     </div>
+
   </section>
 
+
   <!-- FEATURED TIKTOK -->
-  <section id="featured" class="tiktok-section">
+
+  <section id="featured">
+
     <div class="container">
 
-      <div class="section-label">03 / Featured</div>
+      <div class="section-label">
+        03 / Featured
+      </div>
 
-      <h2 class="section-title">Featured on TikTok.</h2>
+      <h2 class="section-title">
+        Recent<br>content.
+      </h2>
 
       <p class="section-text">
-        A look at some of my latest gaming content and viral moments.
+        A look at some of the content driving the MOVVS33 community.
       </p>
 
       <div class="tiktok-grid">
 
-        <!-- TIKTOK VIDEO 1 -->
         <div class="tiktok-card">
+
           <div class="tiktok-video">
+
             <iframe
               src="https://www.tiktok.com/player/v1/7653755517340503318?autoplay=1&loop=1&controls=1&description=0&music_info=0"
               allow="autoplay; fullscreen"
               title="MOVVS33 TikTok Video 1">
             </iframe>
+
           </div>
 
-          <div class="tiktok-info">
-            <span>Featured Video 01</span>
-            <a
-              class="tiktok-link"
-              href="https://www.tiktok.com/@movvs33/video/7653755517340503318"
-              target="_blank"
-              rel="noopener noreferrer">
-              Watch on TikTok ↗
-            </a>
-          </div>
         </div>
 
-        <!-- TIKTOK VIDEO 2 -->
+
         <div class="tiktok-card">
+
           <div class="tiktok-video">
+
             <iframe
               src="https://www.tiktok.com/player/v1/7663219555749137686?autoplay=1&loop=1&controls=1&description=0&music_info=0"
               allow="autoplay; fullscreen"
               title="MOVVS33 TikTok Video 2">
             </iframe>
+
           </div>
 
-          <div class="tiktok-info">
-            <span>Featured Video 02</span>
-            <a
-              class="tiktok-link"
-              href="https://www.tiktok.com/@movvs33/video/7663219555749137686"
-              target="_blank"
-              rel="noopener noreferrer">
-              Watch on TikTok ↗
-            </a>
-          </div>
         </div>
 
-        <!-- TIKTOK VIDEO 3 -->
+
         <div class="tiktok-card">
+
           <div class="tiktok-video">
+
             <iframe
               src="https://www.tiktok.com/player/v1/7653014275467824406?autoplay=1&loop=1&controls=1&description=0&music_info=0"
               allow="autoplay; fullscreen"
               title="MOVVS33 TikTok Video 3">
             </iframe>
+
           </div>
 
-          <div class="tiktok-info">
-            <span>Featured Video 03</span>
-            <a
-              class="tiktok-link"
-              href="https://www.tiktok.com/@movvs33/video/7653014275467824406"
-              target="_blank"
-              rel="noopener noreferrer">
-              Watch on TikTok ↗
-            </a>
-          </div>
         </div>
 
       </div>
 
     </div>
+
   </section>
+
+
+  <!-- LINKS -->
+
+  <section id="links">
+
+    <div class="container">
+
+      <div class="section-label">
+        04 / Connect
+      </div>
+
+      <h2 class="section-title">
+        Everything<br>MOVVS33.
+      </h2>
+
+      <p class="section-text">
+        Follow, join the community, check out my featured work and
+        explore the gaming brands and platforms I work with.
+      </p>
+
+
+      <div class="links-grid">
+
+
+        <!-- WIKI -->
+
+        <a
+          href="https://movvs33.fandom.com/wiki/MOVVS33_Wiki"
+          target="_blank"
+          class="link-card featured-link"
+        >
+
+          <div>
+            <div class="link-label">OFFICIAL</div>
+
+            <h3>MOVVS33 Wiki</h3>
+
+            <p>
+              Explore the official MOVVS33 creator wiki.
+            </p>
+          </div>
+
+          <div class="link-arrow">↗</div>
+
+        </a>
+
+
+        <!-- ELDORADO -->
+
+        <a
+          href="https://go.eldorado.gg/movvs33"
+          target="_blank"
+          class="link-card featured-link"
+        >
+
+          <div>
+            <div class="link-label">GAMING</div>
+
+            <h3>Top Up Blood Strike</h3>
+
+            <p>
+              Get Blood Strike Gold through my exclusive link.
+            </p>
+          </div>
+
+          <div class="link-arrow">↗</div>
+
+        </a>
+
+
+        <!-- FIX STORIES -->
+
+        <a
+          href="https://www.fixgamingchannel.com/fix-stories-how-mobile-gaming-became-a-creator-career/"
+          target="_blank"
+          class="link-card"
+        >
+
+          <div>
+            <div class="link-label">FEATURED STORY</div>
+
+            <h3>How Gaming Became a Creator Career</h3>
+
+            <p>
+              Read my featured creator story on Fix Gaming.
+            </p>
+          </div>
+
+          <div class="link-arrow">↗</div>
+
+        </a>
+
+
+        <!-- SKYCOACH -->
+
+        <a
+          href="https://s.skycoach.gg/PROC"
+          target="_blank"
+          class="link-card"
+        >
+
+          <div>
+            <div class="link-label">PARTNER</div>
+
+            <h3>Skycoach</h3>
+
+            <p>
+              Destiny 2 boosting, carries and recovery services.
+            </p>
+          </div>
+
+          <div class="link-arrow">↗</div>
+
+        </a>
+
+
+        <!-- SKINCLUB -->
+
+        <a
+          href="https://l.skin.club/826MOVVS33TIKTOK1TP"
+          target="_blank"
+          class="link-card"
+        >
+
+          <div>
+            <div class="link-label">PARTNER</div>
+
+            <h3>SkinClub</h3>
+
+            <p>
+              CS2 case opening and gaming skins.
+            </p>
+          </div>
+
+          <div class="link-arrow">↗</div>
+
+        </a>
+
+
+        <!-- TIKTOK -->
+
+        <a
+          href="https://www.tiktok.com/@movvs33"
+          target="_blank"
+          class="link-card"
+        >
+
+          <div>
+            <div class="link-label">SOCIAL</div>
+
+            <h3>TikTok</h3>
+
+            <p>
+              Follow MOVVS33 for gaming content.
+            </p>
+          </div>
+
+          <div class="link-arrow">↗</div>
+
+        </a>
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+          href="https://www.instagram.com/movvs33"
+          target="_blank"
+          class="link-card"
+        >
+
+          <div>
+            <div class="link-label">SOCIAL</div>
+
+            <h3>Instagram</h3>
+
+            <p>
+              Gaming clips, updates and creator content.
+            </p>
+          </div>
+
+          <div class="link-arrow">↗</div>
+
+        </a>
+
+
+        <!-- FACEBOOK -->
+
+        <a
+          href="https://www.facebook.com/movvs33"
+          target="_blank"
+          class="link-card"
+        >
+
+          <div>
+            <div class="link-label">SOCIAL</div>
+
+            <h3>Facebook</h3>
+
+            <p>
+              Follow MOVVS33 on Facebook.
+            </p>
+          </div>
+
+          <div class="link-arrow">↗</div>
+
+        </a>
+
+
+        <!-- YOUTUBE -->
+
+        <a
+          href="https://www.youtube.com/@movvs33"
+          target="_blank"
+          class="link-card"
+        >
+
+          <div>
+            <div class="link-label">SOCIAL</div>
+
+            <h3>YouTube</h3>
+
+            <p>
+              Gaming videos and creator content.
+            </p>
+          </div>
+
+          <div class="link-arrow">↗</div>
+
+        </a>
+
+
+        <!-- WHATSAPP -->
+
+        <a
+          href="https://chat.whatsapp.com/K6MEWdunrWu9QPy0oaamlv"
+          target="_blank"
+          class="link-card featured-link"
+        >
+
+          <div>
+            <div class="link-label">COMMUNITY</div>
+
+            <h3>WhatsApp Community</h3>
+
+            <p>
+              Join the MOVVS33 BloodStrike community.
+            </p>
+          </div>
+
+          <div class="link-arrow">↗</div>
+
+        </a>
+
+
+        <!-- DISCORD -->
+
+        <a
+          href="https://discord.gg/n5VdaaRyje"
+          target="_blank"
+          class="link-card featured-link"
+        >
+
+          <div>
+            <div class="link-label">COMMUNITY</div>
+
+            <h3>Discord</h3>
+
+            <p>
+              Join the MOVVS33 gaming community.
+            </p>
+          </div>
+
+          <div class="link-arrow">↗</div>
+
+        </a>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
 
   <!-- PARTNERSHIPS -->
+
   <section id="partnerships">
+
     <div class="container">
 
-      <div class="section-label">04 / Partnerships</div>
+      <div class="section-label">
+        05 / Partnerships
+      </div>
 
-      <h2 class="section-title">Let's build something.</h2>
-
-      <p class="section-text">
-        I work with gaming, technology and lifestyle brands to create
-        authentic campaigns that connect with an engaged gaming audience.
-      </p>
+      <h2 class="section-title">
+        Let's build<br>something.
+      </h2>
 
       <div class="partnership-box">
+
         <div>
-          <h3>For Brands & Partnerships</h3>
+
+          <h3>Work with MOVVS33.</h3>
+
           <p>
-            Sponsored content, product promotion, gaming campaigns,
-            creator collaborations and social media partnerships.
+            Looking for a gaming creator who can bring authentic
+            content, an engaged audience and strong community reach
+            to your brand?
           </p>
+
         </div>
 
-        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+        <a
+          href="#contact"
+          class="partnership-button"
+        >
+          Start a Conversation →
+        </a>
+
       </div>
 
     </div>
+
   </section>
+
 
   <!-- CONTACT -->
+
   <section id="contact">
+
     <div class="container">
 
-      <div class="section-label">05 / Contact</div>
+      <div class="contact-grid">
 
-      <h2 class="section-title">Have a project?</h2>
+        <div>
 
-      <p class="section-text">
-        For business inquiries, partnerships and collaborations,
-        get in touch directly.
-      </p>
+          <div class="section-label">
+            06 / Contact
+          </div>
 
-      <div class="contact-box">
+          <h2 class="section-title">
+            Let's talk.
+          </h2>
 
-        <div class="section-label">Business Email</div>
+          <p class="section-text">
+            For brand partnerships, campaigns, collaborations
+            and business opportunities.
+          </p>
 
-        <a class="email" href="mailto:contact@movvs33.com">
-          contact@movvs33.com
-        </a>
+        </div>
 
-        <br>
+        <div>
 
-        <a href="mailto:contact@movvs33.com" class="btn btn-primary">
-          Send Email
-        </a>
+          <div class="contact-note">
+            Business inquiries
+          </div>
+
+          <a
+            href="mailto:contact@movvs33.com"
+            class="email-box"
+          >
+            contact@movvs33.com
+          </a>
+
+        </div>
 
       </div>
 
     </div>
+
   </section>
 
+
   <!-- FOOTER -->
+
   <footer>
-    <div class="container footer-inner">
-      <div>© 2026 MOVVS33. All rights reserved.</div>
-      <div>Gamer · Influencer · Content Creator</div>
+
+    <div class="container">
+
+      <div class="footer-inner">
+
+        <div class="footer-brand">
+          MOVVS<span>33</span>
+        </div>
+
+        <div class="footer-copy">
+          © 2026 MOVVS33 · All Rights Reserved
+        </div>
+
+      </div>
+
     </div>
+
   </footer>
 
 </body>
