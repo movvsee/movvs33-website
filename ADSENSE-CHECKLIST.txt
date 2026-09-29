@@ -1,0 +1,13 @@
+MOVVS33 AdSense preparation
+
+1. Upload index.html, about.html, contact.html, privacy.html, terms.html, robots.txt and sitemap.xml.
+2. Keep the existing assets/logo.png and assets/favicon.png.
+3. Confirm https://movvs33.com/ loads over HTTPS.
+4. Confirm every footer policy link works.
+5. In Google Search Console, submit https://movvs33.com/sitemap.xml and request indexing for the new pages.
+6. Apply for AdSense using https://movvs33.com/.
+7. After Google gives you the AdSense verification/ad code, place Google's exact code in the <head> as instructed. Do not invent a publisher ID or ads.txt entry.
+8. After approval/setup, add ads.txt using the exact line Google provides in AdSense.
+9. For visitors in regions where Google's consent requirements apply, configure a Google-certified CMP through AdSense before serving personalized ads.
+
+Do not add fake articles, copied text, keyword stuffing, fake reviews, or fake traffic to make the site look larger. Keep the content original and accurate.
